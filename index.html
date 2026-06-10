@@ -230,6 +230,18 @@ body::after {
 body.toc-open .toc-toggle {
   transform: translateY(-50%) translateX(348px);
 }
+@media (max-width: 640px) {
+  .toc-toggle {
+    top: calc(env(safe-area-inset-top, 0px) + 10px);
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    transform: none;
+  }
+  body.toc-open .toc-toggle {
+    transform: translateX(calc(min(342px, 100vw - 36px) + 16px));
+  }
+}
 .toc-panel {
   position: fixed;
   left: 18px;
